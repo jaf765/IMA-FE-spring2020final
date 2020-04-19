@@ -2,14 +2,40 @@ body {
   background-image: url("plantbackfilter.jpg");
 }
 
+.welcomeFormat{
+  text-align: left;
+  margin-left: 200px;
+  margin-top: 175px;
+
+}
+
+
 .playfair {
   font-family: 'Playfair Display', serif;
   font-size: 40pt;
 }
 
-.jungle {
-font-size: 70pt;
+.welcome{
+  color: white;
+  margin-bottom: -10px;
 
+}
+
+.jungle {
+font-size: 115pt;
+color: white;
+margin-top: -20px;
+font-weight: 900;
+
+
+}
+
+.guide {
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30pt;
+  font-weight: 300;
+  margin-bottom: 80px;
 }
 
 /* .ghostButton {
@@ -26,8 +52,6 @@ font-size: 70pt;
 } */
 
 a.btn,.btn {
-  margin-right: 1em; /* remove this while use*/
-  margin-bottom: 1em; /* remove this while use*/
 	display: inline-block;
 	outline: none;
 	*zoom: 1;
@@ -44,10 +68,17 @@ a.btn,.btn {
 
   border-radius: 3px;
 
-  font-size: 0.9375em;
-	padding: 0.5375em 1.375em;
+  font-size: 16pt;
+	padding: 0.5625em 1.5em;
 
   color: white;
 	border-color: white;
+  margin-top: 60px;
 
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+  border-color: white;
 }
