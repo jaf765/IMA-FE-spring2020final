@@ -21,3 +21,23 @@ anime.timeline({loop: false})
   }).add({
     targets: '.ml9',
   });
+
+//line growth
+
+$(document).ready(function(){
+  $(".menu-card-1").mouseover(function(){
+    $(".line1").animate({width: '110px'});
+  });
+  $(".menu-card-1").mouseout(function(){
+    $(".line1").animate({width: '90px'});
+  });
+});
+
+$(document).ready(function(){
+  $(".menu-card-2").mouseover(function(){
+    $(".line2").animate({width: '110px'});
+  });
+  $(".menu-card-2").mouseout(function(){
+    $(".line2").animate({width: '90px'});
+  });
+});
