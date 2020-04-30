@@ -1,6 +1,6 @@
 //switch div function
 
-$('.btn').click(function() {
+$('.butt').click(function() {
     $('html,body').animate({
         scrollTop: $(".second").offset().top},
         'slow');

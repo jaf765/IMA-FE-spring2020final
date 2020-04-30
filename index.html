@@ -9,6 +9,10 @@
      <meta name="description" content="">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <link rel="stylesheet" href="style.css">
+     <!-- animate css -->
+     <link rel="stylesheet" type="text/css" href="css/animate.css">
+     <!-- bootstrap -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
      <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
@@ -20,13 +24,18 @@
     <p class = "playfair welcome"> Welcome to the </p>
     <h1 class = "playfair jungle ml9"> <span class="text-wrapper"><span class="letters">JUNGLE </span></span></h1>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <p class = "guide"> A Chic Guide to Plant Care </p>
-    <a class="btn" type="button" href="#">EXPLORE</a>
+    <p class = "guide"> A Houseplant Matchmaker </p>
+    <p class = "text"> Studies have proven that house plants improve concentration <br />
+      and productivity (by up to 15%), reduce stress levels, and boost your mood. <br />
+      Find out your houseplant match made in heaven with the quiz!</p>
+
+    <a class="butt" type="button" href="#">TAKE THE QUIZ</a>
   </div>
 </div>
 
 <div class="second">
-  <h1 class="header playfair">Begin your plant journey today!</h1>
+
+  <!-- <h1 class="header playfair">Begin your plant journey today!</h1>
   <div class="container">
     <section class="menuCard menu-card-1">
       <a href="#quiz">
@@ -35,11 +44,58 @@
           <p class="title"> QUIZ </p>
           <div><hr class="line1"/></div>
           <p class="blurb"> find your houseplant <br /> match made in heaven </p>
-        </a>
+        </a> -->
+        <h1 class="header"> The Quiz </h1>
+        <h3 class="subline"> Humans are unique, and plants are no different. <br  /> Find out which plant is most compatible for you. </h3>
+
+        <!-- <div class="container text-center">
+        </div> -->
+
+        <div class="container text-center">
+          <ul id="quiz" class="list-group">
+
+          </ul>
+        </div>
+
+        <div class="container text-center hide results">
+          <img src="https://raw.githubusercontent.com/danubevictoria/quiz/master/images/results1.jpg" class="results col-md-4 col-sm-4 col-xs-4">
+          <img src="https://raw.githubusercontent.com/danubevictoria/quiz/master/images/results2.jpg" class="results col-md-4 col-sm-4 col-xs-4">
+          <img src="https://raw.githubusercontent.com/danubevictoria/quiz/master/images/results3.jpg" class="results col-md-4 col-sm-4 col-xs-4">
+        </div>
+
+        <!-- <div class="container progress">
+          <div id="intro-bar" class="progress-bar" style="width: 15%" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+            15%
+          </div>
+          <div id="extro-bar" class="progress-bar bg-success" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+            30%
+          </div>
+        </div> -->
+
+        <div class="container text-center results hide">
+          <p id="results"></p>
+        </div>
+
+        <div class="container text-center bottom">
+          <button id="submit-btn" class="btn btn-primary btn-lg">SUBMIT</button>
+
+          <button id="retake-btn" class="hide btn btn-primary btn-lg">Retake Quiz</button>
+        </div>
+        <!-- SCRIPTS -->
+
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <!-- BOOTSTRAP -->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <!-- CUSTOM -->
+        <script type="text/javascript" src="quiz.js"></script>
+
+
         </div>
      </section>
 
-     <section class="menuCard pink menu-card-2">
+     <!-- <section class="menuCard pink menu-card-2">
        <a href="#blog">
          <div class="menuInfo">
            <p class="the"> THE </p>
@@ -48,7 +104,7 @@
            <p class="blurb"> tips & tricks to caring <br /> for your plant </p>
          </a>
          </div>
-      </section>
+      </section> -->
   </div>
 
 

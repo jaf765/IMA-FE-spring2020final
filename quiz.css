@@ -28,26 +28,22 @@ body {
 	font-size: 20px;
 	font-family: 'Work Sans', sans-serif;
 	padding-top: 50px;
-}
 
-#quiz {
-	background-color: none;
 }
 
 
 .btn {
 	margin: 0 20px 0 20px;
 	font-family: 'Work Sans', sans-serif;
-
-
+	background-color: #EDE6E4;
+	padding: 20px;
 }
 
 .btn-strongly-agree {
-	color: #89d298;
+	color: #262626;
 	font-weight: bold;
-
-
 }
+
 
 .btn-strongly-agree.active,
 .btn-strongly-agree:active,
@@ -60,7 +56,7 @@ body {
 }
 
 .btn-agree {
-	color: #89d298;
+	color: #262626;
 }
 
 .btn-agree.active,
@@ -73,7 +69,7 @@ body {
 }
 
 .btn-disagree {
-	color: #e28181;
+	color: #262626;
 }
 
 .btn-disagree.active,
@@ -86,7 +82,7 @@ body {
 }
 
 .btn-strongly-disagree {
-	color: #e28181;
+	color: #262626;
 	font-weight: bold;
 }
 
@@ -107,9 +103,39 @@ body {
 	display: none;
 }
 
+.list-group-item {
+	background-color: #EDE6E4;
+	border-color: none;
+}
+
+.list-group-item.prompt {
+	border-color: #EDE6E4;
+
+}
+
 .show {
 	display: block;
 }
+
+#submit-btn {
+	border-radius: 3%;
+	border-color: #262626;
+	border-width: 1.5pt;
+	color: #EDE6E4;
+	margin-top: 70px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: lighter;
+	font-size: 18pt;
+	width: 200px;
+	padding: 10px;
+	background-color: #262626;
+}
+
+#submit-btn:hover {
+	background-color: #EDE6E4;
+	color: #262626;
+}
+
 
 /* RESULTS */
 .results {
