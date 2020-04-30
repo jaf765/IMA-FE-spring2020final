@@ -307,7 +307,7 @@ hr.line2 {
 .btn-strongly-disagree:active:focus,
 .btn-strongly-disagree.active:focus,
 .btn-strongly-disagree:hover {
-	background-color: #e28181;
+	background-color: red;
 }
 
 .bottom {
@@ -324,7 +324,7 @@ hr.line2 {
 }
 
 .list-group-item.prompt {
-	border-color: #EDE6E4;
+	border-color: white;
 
 }
 
