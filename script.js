@@ -23,7 +23,7 @@ anime.timeline({loop: false})
     targets: '.ml9',
   });
 
-	//QUIZ BEGINS
+	//
 
 var prompts = [
  {
