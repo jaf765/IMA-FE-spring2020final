@@ -1,8 +1,27 @@
-// A personality quiz
 
-// This is an array of objects that stores the personality trait that is prompted to the user and the weight for each prompt.
-// If a personality trait is considered more introverted, it will have a negative weight.
-// If a personlity trait is considered more extroverted, it will have a positive weight.
+//switch div function
+
+$('.butt').click(function() {
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
+});
+
+//text animation
+
+var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+  });
 
 var prompts = [
  {
@@ -94,21 +113,7 @@ function createPromptItems() {
 	}
 }
 
-// For each possible value, create a button for each to be inserted into each li of the quiz
-// function createValueButtons() {
 
-// 	for (var li_index = 0; li_index < prompts.length; li_index++) {
-// 		for (var i = 0; i < prompt_values.length; i++) {
-// 			var val_button = document.createElement('button');
-// 			var val_text = document.createTextNode(prompt_values[i].value);
-
-// 			val_button.setAttribute('class', 'value-btn btn ' + prompt_values[i].class);
-// 			val_button.appendChild(val_text);
-
-// 			document.getElementsByClassName('prompt')[li_index].appendChild(val_button);
-// 		}
-// 	}
-// }
 function createValueButtons() {
 	for (var li_index = 0; li_index < prompts.length; li_index++) {
 		var group = document.createElement('div');
@@ -134,8 +139,6 @@ function createValueButtons() {
 createPromptItems();
 createValueButtons();
 
-// Keep a running total of the values they have selected. If the total is negative, the user is introverted. If positive, user is extroverted.
-// Calculation will sum all of the answers to the prompts using weight of the value * the weight of the prompt.
 var total = 0;
 
 // Get the weight associated to group number

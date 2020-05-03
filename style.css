@@ -166,7 +166,7 @@ h1.header {
 
 .btn:focus,
 .btn:active {
-  outline: 0;
+  outline: 0 !important;
 }
 
 .btn-strongly-agree {
