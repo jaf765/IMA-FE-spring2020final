@@ -23,6 +23,8 @@ anime.timeline({loop: false})
     targets: '.ml9',
   });
 
+	//QUIZ BEGINS
+
 var prompts = [
  {
 	prompt: 'I have never owned a plant',
