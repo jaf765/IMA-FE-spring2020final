@@ -17,19 +17,17 @@ body {
 .welcomeFormat{
   text-align: left;
   margin-left: 200px;
-
-
 }
 
 
 .playfair {
   font-family: 'Playfair Display', serif;
-  font-size: 40pt;
 }
 
 .welcome{
   color: white;
   padding-top: 90px;
+  font-size: 40pt;
 }
 
 .jungle {
@@ -37,8 +35,6 @@ font-size: 90pt;
 color: white;
 margin-top: -65px;
 font-weight: 900;
-
-
 }
 
 .guide {
@@ -161,7 +157,7 @@ h1.header {
 .btn {
 	margin: 0 20px 0 20px;
 	font-family: 'Work Sans', sans-serif;
-	padding: 20px;
+
 }
 
 .btn:focus,
@@ -295,4 +291,91 @@ h1.header {
 .results {
 	margin-bottom: 40px;
 	margin-top: 40px;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* this is for breaking down to iphone size */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    /*welcome page */
+    .welcomeFormat{
+      text-align: center;
+      margin-left: 0px;
+    }
+
+    .welcome{
+      color: white;
+      padding-top: 15px;
+      font-size: 30pt;
+    }
+
+    .jungle{
+      padding-top: 30px;
+      font-size: 80px;
+    }
+
+    .guide {
+      font-size: 30pt;
+      padding-top: 20px;
+    }
+
+    .text {
+      color:white;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 18pt;
+      font-weight: lighter;
+      padding-bottom: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+    }
+
+    a.butt,.butt {
+    	display: inline-block;
+    	outline: none;
+    	*zoom: 1;
+    	text-align: center;
+    	text-decoration: none;
+    	font-family: 'Work Sans', sans-serif;
+    	font-weight: 300;
+    	letter-spacing: 1px;
+    	vertical-align: middle;
+    	border: 1px solid;
+    	transition: all 0.2s ease;
+    	box-sizing: border-box;
+    	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+      text-decoration: none;
+
+      border-radius: 3px;
+
+      font-size: 16pt;
+    	padding: 0.5625em 1.5em;
+
+      color: white;
+    	border-color: white;
+      margin-top: 0px;
+    }
+
+    /*quiz page*/
+    .second{
+      background-image: none;
+      border-color: white;
+    }
+
+    .subline {
+    	font-size: 18px;
+    	padding-top: 7px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
 }

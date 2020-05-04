@@ -23,7 +23,7 @@ anime.timeline({loop: false})
     targets: '.ml9',
   });
 
-	//
+
 
 var prompts = [
  {
@@ -217,18 +217,17 @@ $('#submit-btn').click(function () {
 You might want to start with these three plants:\n\
 		';
 	} else if(total > 0) {
-		document.getElementById('results').innerHTML = '<b>You would make a responsible plant parent</b><br><br>\
-		Bright light/low water.\
+		document.getElementById('results').innerHTML = '<b>You are a plant wizard!</b><br><br>\
+		Up for a challenge?\n\
 <br><br>\
-I like how this extrovert explains the way he/she gains energy from being around other people:\
-';
+You should try these three plants:\n\
+		';
 	} else {
-		document.getElementById('results').innerHTML = '<b>Intermmediate!</b><br><br>\
-		lowlight/highwater.\
+		document.getElementById('results').innerHTML = '<b>You would make a responsible plant parent!</b><br><br>\
+		You have great potential!\n\
 <br><br>\
-So let’s look at how an ambivert compares.\
-<br><br>\
-Ambiverts exhibit both extroverted and introverted tendencies. This means that they generally enjoy being around people, but after a long time this will start to drain them. Similarly, they enjoy solitude and quiet, but not for too long. Ambiverts recharge their energy levels with a mixture of social interaction and alone time.'
+You might want to start with these three plants:\n\
+		';
 	}
 
 	// Hide the quiz after they submit their results
