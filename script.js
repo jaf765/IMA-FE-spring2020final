@@ -217,12 +217,14 @@ $('#submit-btn').click(function () {
 You might want to start with these three plants:\n\
 		';
 	} else if(total > 0) {
+		fetchAdvanced();
 		document.getElementById('results').innerHTML = '<b>You are a plant wizard!</b><br><br>\
 		Up for a challenge?\n\
 <br><br>\
 You should try these three plants:\n\
 		';
 	} else {
+		fetchIntermediate();
 		document.getElementById('results').innerHTML = '<b>You would make a responsible plant parent!</b><br><br>\
 		You have great potential!\n\
 <br><br>\
