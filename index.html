@@ -1,5 +1,6 @@
 
 
+
 <html>
 
 <head>
@@ -19,57 +20,78 @@
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <script>
+const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpcCI6WzQ4LDQ2LDQ4LDQ2LDQ4LDQ2LDQ4XSwiaXNzdWVyX2lkIjo0MzIwLCJvcmlnaW4iOiJodHRwczovL2NlemFyLmlvIiwiYXVkIjoiSm9rZW4iLCJleHAiOjE1ODY4OTUxNDMsImlhdCI6MTU4Njg4Nzk0MywiaXNzIjoiSm9rZW4iLCJqdGkiOiIybzJzNGJhb3Rhc3BiamdhM2MwMDAwazEiLCJuYmYiOjE1ODY4ODc5NDN9.KrNYSnYYlg2yBvARVv9YjxuOfhIWRSaTcC5RmB5eF6E'
+
+
 function fetchIntermediate() {
                 $.ajax({
                     url:'/intermediateplants',
                     type: 'GET',
-                    complete: function (response) {
+                    dataType: 'json',
+                      complete: function (response) {
+                        const plantData = response.responseJSON
                         console.log(response.responseJSON)
                         //$('#output-2').html(response.responseText);
-                        $('#plantimage').src = response.whatever.whwatver.image.rc;
-                        $('#plantname').html(response.whatver.whatever.title);
-                        $('#scientificname').html(response.scientific_name);
-                        // $('#output-3').html(response.responseText);
+
+                        $('#plantname').html(plantData.common_name);
+                        $('#scientificname').html(plantData.scientific_name);
+                        $('#plantimage').attr('src', plantData.images[0].url);
                     },
                     error: function () {
-                        $('#plantname').html('Bummer: there was an error!');
+                      $('#plantimage').html('Bummer: there was an error with the advanced image!');
+                      $('#plantname').html('Bummer: there was an error with the plant name!');
+                      $('#scientificname').html('Bummer: there was an error scientific name!');
                     },
                 });
                 return false;
             }
 
 
-      function fetchAdvanced() {
+            function fetchAdvanced() {
                 $.ajax({
                     url:'/advancedplants',
                     type: 'GET',
+                    dataType: 'json',
                     complete: function (response) {
-                        console.log(response.responseJSON)
-                        //$('#output-2').html(response.responseText);
-                        $('#plantimage').src = response.whatever.whwatver.image.rc;
-                        $('#plantname').html(response.whatver.whatever.title);
-                        $('#scientificname').html(response.scientific_name);
+                        // Let's get the actual JSON from the server from this response object.
+                        const plantData = response.responseJSON
+                        // Print it to the console.log to see what's inside of it. 
+                        console.log('Plant info: ', plantData)
+
+                        // And use the attributes inside to display image, name and scientific name.
+                        $('#plantname').html(plantData.common_name);
+                        $('#scientificname').html(plantData.scientific_name);
+                        // Special note: To set the source of an image, you need to use the 
+                        // attr() function. That goes for any attribute of the HTML tag (class, src, href, etc.)
+                        $('#plantimage').attr('src', plantData.images[0].url);
                     },
                     error: function () {
-                        $('#plantname').html('Bummer: there was an error!');
+                      $('#plantimage').html('Bummer: there was an error with the advanced image!');
+                      $('#plantname').html('Bummer: there was an error with the plant name!');
+                      $('#scientificname').html('Bummer: there was an error scientific name!');
                     },
                 });
                 return false;
             }
+
 
       function fetchBeginner() {
               $.ajax({
                   url:'/beginnerplants',
                   type: 'GET',
+                  dataType: 'json',
                   complete: function (response) {
+                      const plantData = response.responseJSON
                       console.log(response.responseJSON)
                       // $('#output-1').html(response.responseText);
-                      $('#plantimage').src = response.whatever.whwatver.image.rc;
-                      $('#plantname').html(response.whatver.whatever.title);
-                      $('#scientificname').html(response.scientific_name)
+                        $('#plantname').html(plantData.common_name);
+                        $('#scientificname').html(plantData.scientific_name);
+                        $('#plantimage').attr('src', plantData.images[0].url);
                   },
                   error: function () {
-                      $('#plantname').html('Bummer: there was an error!');
+                    $('#plantimage').html('Bummer: there was an error with the beginner image!');
+                    $('#plantname').html('Bummer: there was an error with the plant name!');
+                    $('#scientificname').html('Bummer: there was an error scientific name!');
                   },
               });
               return false;
@@ -99,7 +121,7 @@ function fetchIntermediate() {
 
         <h1 class="header"> The Quiz </h1>
         <h3 class="subline"> Humans are unique, and plants are no different. <br  /> Find out which plant is most compatible for you. </h3>
-
+        <!-- <h2 id="resultheader">Your Plant Matches</h2> -->
 
         <div class="container text-center">
           <ul id="quiz" class="list-group">
@@ -133,3 +155,4 @@ function fetchIntermediate() {
         </body>
 
 </html>
+
