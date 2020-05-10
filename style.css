@@ -234,6 +234,10 @@ h1.header {
 	display: none;
 }
 
+li {
+  display: block;
+}
+
 .list-group-item {
 	background-color: #EDE6E4;
 	border-color: none;
@@ -290,9 +294,35 @@ h1.header {
 /* RESULTS */
 .results {
 	margin-bottom: 40px;
-	margin-top: 40px;
+  margin-top: 40px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: lighter;
+  font-size:16pt;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 
+#resultheader {
+  font-family: 'Playfair Display', serif;
+  font-size: 36pt;
+  padding-top: 15px;
+}
+
+#plantname {
+  font-family: 'Playfair Display', serif;
+  font-size: 28pt;
+  padding-top: 15px;
+}
+
+#scientificname {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20pt;
+}
+
+#plantimage {
+  width: 40%;
+  padding-top: 50px;
+}
 
 
 
@@ -313,30 +343,39 @@ h1.header {
 
     .welcome{
       color: white;
-      padding-top: 15px;
-      font-size: 30pt;
+      padding-top: 30px;
+      font-size: 24pt;
     }
 
     .jungle{
-      padding-top: 30px;
-      font-size: 80px;
+      padding-top: 28px;
+      font-size: 70px;
     }
 
     .guide {
-      font-size: 30pt;
+      font-size: 24pt;
       padding-top: 20px;
     }
 
     .text {
       color:white;
       font-family: 'Work Sans', sans-serif;
-      font-size: 18pt;
+      font-size: 16pt;
       font-weight: lighter;
       padding-bottom: 30px;
       padding-left: 10px;
       padding-right: 10px;
 
     }
+
+    .subline br {
+      display:none;
+    }
+
+    .text br{
+      display:none;
+    }
+
 
     a.butt,.butt {
     	display: inline-block;
@@ -376,6 +415,11 @@ h1.header {
       padding-bottom: 20px;
       padding-left: 10px;
       padding-right: 10px;
+    }
+
+
+    #plantimage{
+      width: 60%;
     }
 
 }
